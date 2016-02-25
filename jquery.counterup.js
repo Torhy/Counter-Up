@@ -29,8 +29,12 @@
         var counterUpper = function() {
             var nums = [];
             var divisions = $settings.time / $settings.delay;
-            var num = $this.text();
+//          var num = $this.text();
+            // removed this line based on solution by russelcole
+            // https://github.com/bfintal/Counter-Up/issues/28#issue-132097963
+
             var num = $originalText;
+
             // added this line based on solution by russelcole
             // https://github.com/bfintal/Counter-Up/issues/28#issue-132097963
 
