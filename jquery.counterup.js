@@ -30,6 +30,11 @@
         // added this line based on solution by russelcole
         // https://github.com/bfintal/Counter-Up/issues/28#issue-132097963
 
+
+        if ($settings.total == null) {
+            $settings.total = $this.text();
+        }
+
         var counterUpper = function() {
             var nums = [];
             var divisions = $settings.time / $settings.delay;
