@@ -4,7 +4,11 @@
 * Copyright 2013, Benjamin Intal http://gambit.ph @bfintal
 * Released under the GPL v2 License
 *
-* Date: Nov 26, 2013
+* Date: 25 Feb 2016
+* Forked by onepartscissors based on
+* https://github.com/bfintal/Counter-Up
+*
+*
 */
 (function( $ ){
   "use strict";
@@ -14,7 +18,7 @@
     // Defaults
     var settings = $.extend({
         'time': 400,
-        'delay': 10
+        'delay': 10,
     }, options);
 
     return this.each(function(){
@@ -32,9 +36,7 @@
 //          var num = $this.text();
             // removed this line based on solution by russelcole
             // https://github.com/bfintal/Counter-Up/issues/28#issue-132097963
-
-            var num = $originalText;
-
+            var num = $settings.total;
             // added this line based on solution by russelcole
             // https://github.com/bfintal/Counter-Up/issues/28#issue-132097963
 

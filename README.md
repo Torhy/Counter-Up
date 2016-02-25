@@ -50,13 +50,17 @@ $('.counter').counterUp();
 ```
 $('.counter').counterUp({
     delay: 10,
-    time: 1000
+    time: 1000,
+    total: 56
 });
 ```
 
 `delay` - The delay in milliseconds per number count up
 
 `time` - The total duration of the count up animation
+
+`total` - The total number the counter will count up to.
+This is to solve the issue raised in https://github.com/bfintal/Counter-Up/issues/28#issue-132097963
 
 Social Stuff
 ============
