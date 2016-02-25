@@ -22,11 +22,18 @@
         // Store the object
         var $this = $(this);
         var $settings = settings;
+        var $originalText = $this.text();
+        // added this line based on solution by russelcole
+        // https://github.com/bfintal/Counter-Up/issues/28#issue-132097963
 
         var counterUpper = function() {
             var nums = [];
             var divisions = $settings.time / $settings.delay;
             var num = $this.text();
+            var num = $originalText;
+            // added this line based on solution by russelcole
+            // https://github.com/bfintal/Counter-Up/issues/28#issue-132097963
+
             var isComma = /[0-9]+,[0-9]+/.test(num);
             num = num.replace(/,/g, '');
             var isInt = /^[0-9]+$/.test(num);
