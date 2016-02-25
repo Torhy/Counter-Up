@@ -19,6 +19,7 @@
     var settings = $.extend({
         'time': 400,
         'delay': 10,
+        'total': 0,
     }, options);
 
     return this.each(function(){
@@ -27,13 +28,14 @@
         var $this = $(this);
         var $settings = settings;
         var $originalText = $this.text();
+        var toptotal = $settings.total;
         // added this line based on solution by russelcole
         // https://github.com/bfintal/Counter-Up/issues/28#issue-132097963
 
-
-        if ($settings.total == null) {
-            $settings.total = $this.text();
+        if (toptotal == 0) {
+          toptotal = $this.text();
         }
+        var toptotal = String(toptotal);
 
         var counterUpper = function() {
             var nums = [];
@@ -41,9 +43,7 @@
 //          var num = $this.text();
             // removed this line based on solution by russelcole
             // https://github.com/bfintal/Counter-Up/issues/28#issue-132097963
-            var num = $settings.total;
-            // added this line based on solution by russelcole
-            // https://github.com/bfintal/Counter-Up/issues/28#issue-132097963
+            var num = toptotal;
 
             var isComma = /[0-9]+,[0-9]+/.test(num);
             num = num.replace(/,/g, '');
